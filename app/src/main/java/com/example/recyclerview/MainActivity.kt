@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
+
 class MainActivity : AppCompatActivity() {
 
     var lista: RecyclerView? = null
@@ -19,16 +20,16 @@ class MainActivity : AppCompatActivity() {
 
         val platillos = ArrayList<Platillo>()
 
-        platillos.add(Platillo("Platillo 1", 250.0, 3.5F, R.drawable.chiles900))
-        platillos.add(Platillo("Platillo 2", 100.0, 3.5F, R.drawable.platillo))
-        platillos.add(Platillo("Platillo 3", 50.0, 3.5F, R.drawable.platillo2))
-        platillos.add(Platillo("Platillo 4", 350.0, 3.5F, R.drawable.platillo3))
-        platillos.add(Platillo("Platillo 5", 254.0, 3.5F, R.drawable.platillo4))
-        platillos.add(Platillo("Platillo 6", 210.0, 3.5F, R.drawable.platillo5))
-        platillos.add(Platillo("Platillo 7", 400.0, 3.5F, R.drawable.platillo6))
-        platillos.add(Platillo("Platillo 8", 478.0, 3.5F, R.drawable.platillo7))
-        platillos.add(Platillo("Platillo 9", 349.0, 3.5F, R.drawable.platillo8))
-        platillos.add(Platillo("Platillo 10", 102.0, 3.5F, R.drawable.platillo9))
+        platillos.add(Platillo("Chiles en su Salsa", 250.0, 3.5F, R.drawable.chiles900))
+        platillos.add(Platillo("Lasaña Rica", 100.0, 3.5F, R.drawable.platillo))
+        platillos.add(Platillo("Tacos de Carne", 50.0, 3.5F, R.drawable.platillo2))
+        platillos.add(Platillo("Pajaro Desmechado", 350.0, 3.5F, R.drawable.platillo3))
+        platillos.add(Platillo("Tocos con Arroz", 254.0, 3.5F, R.drawable.platillo4))
+        platillos.add(Platillo("Sushi con Huevo", 210.0, 3.5F, R.drawable.platillo5))
+        platillos.add(Platillo("Tacos con Frijol", 400.0, 3.5F, R.drawable.platillo6))
+        platillos.add(Platillo("Hamburguesa de Carne al Vapor", 478.0, 3.5F, R.drawable.platillo7))
+        platillos.add(Platillo("Tacos Detodito", 349.0, 3.5F, R.drawable.platillo8))
+        platillos.add(Platillo("Hamburguesa con Carne de Cerdo", 102.0, 3.5F, R.drawable.platillo9))
 
         lista = findViewById(R.id.lista)
         lista?.setHasFixedSize(true)
@@ -42,5 +43,10 @@ class MainActivity : AppCompatActivity() {
             }
         })
         lista?.adapter = adaptador as AdaptadorCustom
+
+       // val swipeToRefresh = findViewById<SwipeRefreshLayout>(R.id.swipeToRefresh)
+        //swipeToRefresh.setOnRefreshListener {
+          //  Log.d("REFRESH", "La Informacion se esta Actualizando..")
+       // }
     }
 }
